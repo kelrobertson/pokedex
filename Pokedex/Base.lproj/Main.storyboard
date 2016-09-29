@@ -28,9 +28,9 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pokedex" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VpS-Ng-one">
                                         <constraints>
                                             <constraint firstAttribute="width" constant="136" id="8yw-om-LfA"/>
-                                            <constraint firstAttribute="height" constant="45" id="UGU-GE-sXR"/>
+                                            <constraint firstAttribute="height" constant="30" id="UGU-GE-sXR"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="PokemonSolidNormal" family="Pokemon Solid" pointSize="33"/>
+                                        <fontDescription key="fontDescription" name="PokemonSolidNormal" family="Pokemon Solid" pointSize="26"/>
                                         <color key="textColor" red="0.98324350140000005" green="1" blue="0.97058653989999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -51,10 +51,10 @@
                                     <constraint firstAttribute="height" constant="65" id="4hA-ve-3qx"/>
                                     <constraint firstAttribute="bottom" secondItem="VpS-Ng-one" secondAttribute="bottom" constant="8" id="83R-Rt-IJi"/>
                                     <constraint firstItem="VpS-Ng-one" firstAttribute="centerX" secondItem="Y5Z-pB-Fbf" secondAttribute="centerX" id="D1a-bo-UjP"/>
-                                    <constraint firstAttribute="bottom" secondItem="mz5-cm-SRu" secondAttribute="bottom" constant="8" id="Vd1-ez-NI9"/>
+                                    <constraint firstAttribute="bottom" secondItem="mz5-cm-SRu" secondAttribute="bottom" constant="10" id="Vd1-ez-NI9"/>
                                 </constraints>
                             </view>
-                            <searchBar contentMode="redraw" searchBarStyle="minimal" translatesAutoresizingMaskIntoConstraints="NO" id="ynw-rd-NB6">
+                            <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="Search Pokemon" translatesAutoresizingMaskIntoConstraints="NO" id="ynw-rd-NB6">
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="c13-Br-6Vm"/>
                                 </constraints>
@@ -128,6 +128,7 @@
                     </view>
                     <connections>
                         <outlet property="collection" destination="Qdg-Sb-Zod" id="0I0-YM-k9l"/>
+                        <outlet property="searchBar" destination="ynw-rd-NB6" id="qim-5K-rKD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
