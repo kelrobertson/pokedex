@@ -88,7 +88,13 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     
     //tap on a cell execute when tapped
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
+        var poke: Pokemon!
+        if inSearchMode {
+            poke = filteredPokemon[indexPath.row]
+        } else {
+            poke = pokemon[indexPath.row]
+        }
+        performSegue(withIdentifier: "pokemonDetailVC", sender: poke)
     }
     
     // number of items in section
@@ -137,6 +143,21 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             //$$0 placeholder for each item in array[] specified
             filteredPokemon = pokemon.filter({$0.name.range(of: lower) != nil})
             collection.reloadData()
+        }
+    }
+    
+    //sends data to new segue (anyobject)
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        //check if segue ident is = pokemonDetailVC
+        if segue.identifier == "pokemonDetailVC" {
+            //create a variable for deatilVS and destinaion is pokemonDetailVC
+            if let detailVC = segue.destination as? pokemonDetailVC {
+                //creating poke and sending as class pokemon
+                if let poke = sender as? Pokemon {
+                    //grab var pokemon from detailVC and set it to poke
+                    detailVC.pokemon = poke
+                }
+            }
         }
     }
 }
