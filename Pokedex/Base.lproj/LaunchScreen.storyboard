@@ -5,6 +5,11 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Pokemon.ttf">
+            <string>PokemonSolidNormal</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="EHf-IW-A2E">
@@ -19,13 +24,35 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pokemonloading" translatesAutoresizingMaskIntoConstraints="NO" id="jFu-3C-4G0"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9po-ES-vi8">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="156" id="7ap-ge-3Ga"/>
+                                    <constraint firstAttribute="height" constant="70" id="sC6-En-WTa"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="PokemonSolidNormal" family="Pokemon Solid" pointSize="41"/>
+                                <color key="textColor" red="0.96966851320000003" green="1" blue="0.98653799870000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pokedex..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z5X-c1-b2l">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="181" id="HWd-gL-uzK"/>
+                                    <constraint firstAttribute="height" constant="70" id="xKQ-7j-aTA"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="PokemonSolidNormal" family="Pokemon Solid" pointSize="41"/>
+                                <color key="textColor" red="0.96966851322491465" green="1" blue="0.98653799867638881" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="9po-ES-vi8" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="3KM-qe-6wO"/>
                             <constraint firstItem="jFu-3C-4G0" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="H3e-P5-5db"/>
+                            <constraint firstItem="z5X-c1-b2l" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="OKG-Nk-S4D"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="z5X-c1-b2l" secondAttribute="bottom" constant="82" id="TMS-tU-b51"/>
                             <constraint firstAttribute="trailing" secondItem="jFu-3C-4G0" secondAttribute="trailing" id="Y4D-Mc-iV6"/>
                             <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="jFu-3C-4G0" secondAttribute="bottom" id="atX-e8-xOQ"/>
                             <constraint firstItem="jFu-3C-4G0" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="qGx-tt-MkY"/>
+                            <constraint firstItem="9po-ES-vi8" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="52" id="w6g-Xt-t3A"/>
                         </constraints>
                     </view>
                 </viewController>

@@ -14,6 +14,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     
     @IBOutlet weak var collection: UICollectionView!
     @IBOutlet weak var searchBar: UISearchBar!
+    @IBOutlet weak var musicButton: UIButton!
     
     var filteredPokemon = [Pokemon]()
     var inSearchMode = false
@@ -27,14 +28,15 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         collection.dataSource = self
         collection.delegate = self
         searchBar.delegate = self
-        
         searchBar.returnKeyType = UIReturnKeyType.done
         
         parsePokemonCSV()
         initAudio()
+       
     }
     
     func initAudio() {
+        
         let path = Bundle.main.path(forResource: "pokemonTheme", ofType: "mp3")!
         
         do {
@@ -156,6 +158,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
                 if let poke = sender as? Pokemon {
                     //grab var pokemon from detailVC and set it to poke
                     detailVC.pokemon = poke
+                    detailVC.player = musicPlayer
                 }
             }
         }
